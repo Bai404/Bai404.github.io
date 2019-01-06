@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F01%2F02%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[js高级之运动系列（匀速运动/缓冲运动/弹性运动）]]></title>
+    <url>%2F2019%2F01%2F06%2FJS_moves%2F</url>
+    <content type="text"><![CDATA[匀速运动鼠标经过，匀速运动开始css部分12345678910111213141516171819202122232425*&#123; margin: 0; padding: 0;&#125;.box&#123; position:relative; width:150px; height:150px; background-color: green; top:300px; left:-150px;&#125;.box span&#123; position:absolute; right:-20px; display:block; width:20px; background-color: red; top:50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);&#125; 布局123&lt;div class="box"&gt; &lt;span&gt;匀速&lt;/span&gt;&lt;/div&gt; js代码12345678910111213141516171819202122232425262728window.onload=function()&#123; var box=document.getElementsByClassName("box")[0]; box.onmouseover=function()&#123; startMove(box,0); &#125; box.onmouseout=function()&#123; startMove(box,-150); &#125;&#125;var timer=null;function startMove(obj,target)&#123; var speed=0; clearInterval(timer); timer=setInterval(function()&#123; if(obj.offsetLeft&lt;target)&#123; speed=10; &#125;else&#123; speed=-10; &#125; if(obj.offsetLeft==target)&#123; clearInterval(timer); &#125;else&#123; obj.style.left=obj.offsetLeft+speed+"px"; &#125; &#125;,30);&#125; 简单缓冲运动并回到原点布局部分，嘿嘿以简单为主。1234&lt;div class="box"&gt;&lt;/div&gt;&lt;input type="button" name="" value="开始"&gt;&lt;div class="line"&gt;&lt;/div&gt;&lt;input type="button" name="" value="回到原点"&gt; css部分12345678910111213141516171819body&#123; padding: 0; margin: 0;&#125;.box&#123; position:absolute; top:40px; width: 100px; height: 100px; background-color:red;&#125;.line&#123; position:absolute; left:700px; top:0; width: 5px; height: 200px; background-color:#000;&#125; js代码12345678910111213141516171819202122232425262728293031323334353637var btn=document.getElementsByTagName("input")[0]; var box=document.getElementsByClassName("box")[0]; var back=document.getElementsByTagName("input")[1]; window.onload=function()&#123; var timer=null; btn.onclick=function()&#123; startMove(box,700); &#125; //缓冲运动部分 function startMove(elem,target)&#123; clearTimeout(timer); timer=setInterval(function()&#123; var speed=(target-elem.offsetLeft)/10; speed=speed&gt;0?Math.ceil((target-elem.offsetLeft)/10):Math.floor((target-elem.offsetLeft)/10); if(target==elem.offsetLeft)&#123; clearTimeout(timer); &#125;else&#123; elem.style.left=elem.offsetLeft+speed+"px"; &#125; &#125;,100) &#125; back.onclick=function()&#123; startMove(box,0); &#125; //回到原点部分 function backMove(elem,target)&#123; clearTimeout(timer); timer=setInterval(function()&#123; var speed=Math.floor((target-elem.offsetLeft)/10); if(target==elem.offsetLeft)&#123; clearTimeout(timer); &#125;else&#123; elem.style.left=elem.offsetLeft+speed+"px"; &#125; &#125;,100) &#125; &#125; 弹性运动一个运动的盒子，一个开始的按钮，一条终点线.，我设置这条线的原因是方便看出效果，也可以不设啦。123&lt;div class="box"&gt;&lt;/div&gt;&lt;input type="button" name="" value="开始"&gt;&lt;div class="line"&gt;&lt;/div&gt; javaScript代码如下：12345678910111213141516171819202122window.onload=function()&#123; var btn=document.getElementsByTagName("input")[0]; var box=document.getElementsByClassName("box")[0]; btn.onclick=function()&#123; startMove(box,700); &#125; var timer=null; function startMove(elem,target)&#123; var speed=0; timer=setInterval(function()&#123; speed+=(target-elem.offsetLeft)/8; speed*=0.7; //我觉得0.7的效果好一点 if(Math.abs(speed)&lt;1&amp;&amp;Math.abs(elem.offsetLeft-target)&lt;1)&#123; clearTimeout(timer); elem.style.left=target+"px";//回到终点位置 &#125;else&#123; elem.style.left=elem.offsetLeft+speed+"px"; &#125; &#125;,100) &#125; &#125; 为了使刚好在终点线的位置做弹性运动，传入参数target就是终点线距离盒子的位置。css部分123456789101112131415.box&#123; position:absolute; top:40px; width: 100px; height: 100px; background-color:red;&#125;.line&#123; position:absolute; left:700px; top:0; width: 5px; height: 200px; background-color:#000;&#125;]]></content>
       <categories>
-        <category>Nodejs</category>
+        <category>javaScript</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>javaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[学习镜像概念]]></title>
+    <url>%2F2019%2F01%2F06%2FMirroring%2F</url>
+    <content type="text"><![CDATA[在自学Node.js过程中，看到有说国内直接使用 npm 的官方镜像是非常慢的，推荐使用淘宝 NPM 镜像。由于是半路出家没有很好的计算机基础知识，并不清楚镜像的概念。镜像（Mirroring）是冗余的一种类型，一个磁盘上的数据在另一个磁盘上存在一个完全相同的副本即为镜像。镜像是一种文件存储形式，可以把许多文件做成一个镜像文件。所谓镜像文件其实和ZIP压缩包类似，它将特定的一系列文件按照一定的格式制作成单一的文件，以方便用户下载和使用，例如一个测试版的操作系统、游戏等。自己的理解就是：A的东西全部合成一个文件，B把它复制了过来，我们用软件打开B，B会从一个文件变成有许多文件的另一个A。那npm官方镜像就是我们从npm服务器中把需要的包镜像储存到自己的电脑上。即使小知识点也值得花心思去弄懂鸭，每天进步一点点。!]]></content>
+      <categories>
+        <category>Computer Basics</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+        <tag>镜像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git新手使用总结]]></title>
+    <url>%2F2019%2F01%2F06%2FGit%2F</url>
+    <content type="text"><![CDATA[开始学习使用git bash惹，一边摸索一边记录下自己的学习过程。 关于GitGit是什么Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git的主要功能：版本控制关于版本控制我是这样理解的：一个文件你做了修改，得到一个新的版本，可很多时候你无法使文件回到以前的样子。所以很多人会选择把修改过后的保存到一个新文件中。久而久之文件越来越多，你很难弄清楚哪个文件做了什么修改。这个时候就需要进行版本管理。Git来对这些不同的版本进行控制。还可以很方便地查看两个不同版本之间的不同之处。 Git的工作流程 克隆 Git 资源作为工作目录。 在克隆的资源上添加或修改文件。 如果其他人修改了，你可以更新资源。 在提交前查看修改。 提交修改。 在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。工作区、暂存区和版本库 工作区：就是你在电脑里能看到的目录。 暂存区：英文叫stage, 或index。一般存放在 “.git目录下” 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。我们把文件往Git版本库里添加的时候，是分两步执行的： 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。以下是菜鸟对这些知识的解释： 图中的 objects 标识的区域为 Git 的对象库，实际位于 “.git/objects” 目录下，里面包含了创建的各种对象及内容。当对工作区修改（或新增）的文件执行 “git add” 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。当执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。当执行 “git reset HEAD” 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。当执行 “git rm –cached “ 命令时，会直接从暂存区删除文件，工作区则不做出改变。当执行 “git checkout .” 或者 “git checkout – “ 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。当执行 “git checkout HEAD .” 或者 “git checkout HEAD “ 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。 Git bash使用登录申请了自己的github账号，下载git之后打开git bash。配置本机的用户名和邮箱。 123$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot; 本地使用创建仓库并初始化新建一个文件夹，在目录下建一个test文本，**创建test.txt的时候记得编码设置为UTF8，否则会出现乱码。右键点击git bash。test的内容随便写啦。。。。输入git init初始化仓库.git文件自动生成了，作用上文已经讲过啦，不能删噢。 文件添加和提交 $ git add 文件名.文件类型 添加我们之前创建的test文件如果一个个添加太麻烦惹，我们还有其他方法！ git add -A 提交所有变化git add -u 提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)git add . 提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件 by the way! 我们可以使用git status来查看状态添加成功辣，我们先在可commit了 $ git commit -m “修改注释”提交后git log可以查看日志！ 文件修改我们添加文件后，文件开始被追踪了，这时我们可以git status看看两次的不同喔！怎么看我们修改了什么呢？ 使用$ git diff 文件名+类型 也可以查看文件的内容 $ cat 文件名这个要注意的是必须在文件夹里有那个文件你才可以查看。 如果我现在想撤销更改，执行git checkout – .然后打开文件看看，它果然复原辣！然后我们再次修改文件内容。执行添加，提交步骤。查看日志可以看到两个版本辣。 版本回退从上面的提交日志，黄色commit后面的一串数字，我们把它称为版本号吧！版本回退命令 : $ git reset –hard 版本号前7位 查看文件，已经回到第一个状态了！这是再git log查看日志，commit记录只有一个了，想了解版本回退的原理看廖雪峰老师这个解释！很清楚鸭！ https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000/ 版本恢复输入git reflog查看之前的版本，然后再次git reset –hard到需要的版本即可。 本地仓库关联远程仓库配置ssh首先生成ssh $ssh-keygen -t rsa -C “你的邮箱” 出现了这两行。这是让你输入保存这个秘钥的文件，不输入直接回车它会自动生成。回车以后让你输入push的时候需要的密码，也可以不输入直接回车，这样push的时候就没有密码。再回车。这样ssh key已经创建成功辣然后我们输入以下命令复制ssh key clip &lt; ~/.ssh/id_rsa.pub 进入github，进入Settings点击左边的ssh and GPG keys点击New SSH key，title随便起就好辣，然后把之前复制的ssh key粘贴，然后点击下面的Add SSH key。 添加成功后你的邮箱会受到信息！执行以下命令测试连接是否成功。 $ ssh -T git@github.com 连接成功这里出现了SSH警告 Are you sure you want to continue connecting (yes/no)? 这是因为Git使用SSH连接，而SSH连接在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可。Git会输出一个警告，告诉你已经把GitHub的Key添加到本机的一个信任列表里了：Warning: Permanently added ‘github.com’ (RSA) to the list of known hosts.这个警告只会出现一次，后面的操作就不会有任何警告了。 本地连接github仓库创建一个新仓库复制SSH地址，然后执行以下命令 $git remote add origin 你复制的地址 我的出现了fatal: remote origin already exists.错误，解决方案如图所示。输入git remote -v验证一下会出现你添加成功的远程仓库。如果你以后不想连接这个远程仓库了，只需要输入git remote remove +代称即可 by the way!如果你在创建 repository 的时候，加入了 README.md 或者 LICENSE ，那么 github 会拒绝你的 push 。你需要先执行 git pull origin master。 然后执行如下命令：把本地仓库上传至Github的仓库并进行关联 $ git push -u origin master 刷新github，关联成功了。 克隆远程库执行 git clone 复制的SSH地址 如果是直接clone了别人的仓库是没法push自己的修改的。你需要先fork到自己的远程仓库，然后再从自己那里clone。如果clone了一个项目，并想为这个项目贡献自己的力量，你就可以往自己的仓库推送！然后在GitHub上发起一个pull request。 本地更新远程仓库的修改因为一个项目有很多人参与，如果远程仓库改变了，你想确保自己的文件和远程的一样。执行以下代码 $ git pull origin 或者 可以输入两句“git fetch”和“git merge”$ git fetch$ git merge 以下是我学习的一些博客，感谢这些大神们无私的分享！ https://blog.csdn.net/qazwsxpcm/article/details/68946736?utm_source=blogxgwz0#t1 http://www.cnblogs.com/schaepher/p/5561193.html#function https://blog.csdn.net/qq_36667170/article/details/79085301#t0]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javaScript编程题之检测字符串中出现次数最多的字符]]></title>
+    <url>%2F2019%2F01%2F06%2Fmost%2F</url>
+    <content type="text"><![CDATA[方法一： 123456789101112131415161718var str="aaaaakkkkkkssssaaggggssjjjjjsssaa";var obj=&#123;&#125;;var max,maxNum;for(var i=0;i&lt;str.length;i++)&#123; if(!obj[str[i]])&#123; obj[str[i]]=1 &#125;else&#123; obj[str[i]]++; &#125;&#125;max=0,maxNum="";for(i in obj)&#123; if(obj[i]&gt;max)&#123; max=obj[i]; maxNum=i; &#125;&#125;console.log(maxNum,max); 方法二： 123456789var str="aaaaakkkkkkssssssjjjjjsssaa";var arr=str.split("");function getMost(arr)&#123; return arr.reduce(function(prev,next)&#123; prev[next]=prev[next]+1||1; return prev; &#125;,&#123;&#125;)&#125;console.log(getMost(arr)); 如果刚看这个方法不理解，可以先熟悉一下reduce方法回掉函数各个参数的意义。reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。语法： array.reduce(function(total, currentValue, currentIndex, arr), initialValue) total 必需。初始值, 或者计算结束后的返回值。currentValue 必需。当前元素currentIndex 可选。当前元素的索引arr 可选。当前元素所属的数组对象。initialValue：可选项，其值用于第一次调用 callback 的第一个参数。如果没有设置初始值，则将数组中的第一个元素作为初始值。==空数组调用reduce时没有设置初始值将会报错。== 看一下以下这编程题可以帮助理解reduce方法 123456789101112131415查找数组对象中 age 大于 18 对象&#123;age: 19, name:'Jack'&#125;,&#123;age: 5, name:'Apple'&#125;,&#123;age: 12, name:'Lynn'&#125;,&#123;age: 25, name:'David'&#125;&lt;script&gt; var arr=[&#123;age: 19, name:'Jack'&#125;,&#123;age: 5, name:'Apple'&#125;,&#123;age: 12, name:'Lynn'&#125;,&#123;age: 25, name:'David'&#125;]; function adult(array)&#123; var target=array.filter(function(item) &#123; return (item.age&gt;18); &#125;); return target; &#125; console.log(adult(arr));&lt;/script&gt;]]></content>
+      <categories>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>javaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JS实现抽奖大转盘]]></title>
+    <url>%2F2019%2F01%2F06%2FturningTable%2F</url>
+    <content type="text"><![CDATA[今天试了试自己写个抽奖大转盘。先是借了两张别人的图片：下面是布局部分： 12345678&lt;div class="round"&gt; &lt;div class="box"&gt; &lt;img src="turntable.png" alt=""&gt; &lt;/div&gt; &lt;div class="btn"&gt; &lt;img src="pointer.png" alt=""&gt; &lt;/div&gt;&lt;/div&gt; css部分: 123456789101112.round&#123; position: relative; width: 450px; height: 450px;&#125;.btn&#123; position:absolute; top:50%; left: 50%; margin-top: -138px; margin-left: -94px;&#125; 接下来是JavaScript部分,并使用了css3： 12345678910111213141516171819202122232425262728293031var round=document.getElementsByClassName("round")[0]; var box=round.getElementsByClassName("box")[0].children[0]; var btn=round.getElementsByClassName("btn")[0]; btn.onclick=function()&#123; var deg=Math.floor(Math.random()*360); var num=8; var rotateDeg=num*360+deg; box.style.transform="rotate("+rotateDeg+"deg)"; box.style.transition="5s"; setTimeout("res("+deg+")",5000) &#125; function res(deg)&#123; if(deg&gt;=0&amp;&amp;deg&lt;=51)&#123; alert("免单4999"); &#125;else if(deg&gt;51&amp;&amp;deg&lt;=102)&#123; alert("免单50") &#125;else if(deg&gt;102&amp;&amp;deg&lt;=153)&#123; alert("免单10") &#125;else if(deg&gt;153&amp;&amp;deg&lt;=204)&#123; alert("免单5") &#125;else if(deg&gt;204&amp;&amp;deg&lt;=255)&#123; alert("免分期") &#125;else if(deg&gt;255&amp;&amp;deg&lt;=306)&#123; alert("提额度") &#125;else&#123; alert("未中奖") &#125; box.dataset.rotate=deg; box.style.transform="rotate("+deg+"deg)"; box.style.transition=""; &#125;]]></content>
+      <categories>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>javaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JS写斐波那契数列的几种方法]]></title>
+    <url>%2F2019%2F01%2F06%2Ffibonacci%2F</url>
+    <content type="text"><![CDATA[方法1 最直观的解题思路. 123456789101112131415161718192021function fibonacci(n) &#123; var num1= 1,num2= 1,sum; for(var i = 3; i &lt;= n; i += 1) &#123; sum = num1 + num2 num1 = num2 num2 = sum &#125; return sum&#125;//稍微改进一下以上的方法function fibonaccii(n)&#123; var num1=1,num2=1,num3; var arr=[1,1]; for(var i=3;i&lt;=n;i++)&#123; num3=num1+num2; num1=num2; num2=num3; arr.push(num3); &#125; return arr;&#125; 方法2 使用递归的方法, 但是当数字过大时浏览器会出现假死现象。毕竟递归需要堆栈，数字过大内存不够。 12345678910111213 function result(n)&#123; if(n==1||n==2)&#123; return 1 &#125;; return result(n-2)+result(n-1); &#125;//同样使用递归，只不过使用了三元表达式。 var fib=function(n)&#123; return n&lt;2?n:fib(n-1)+fib(n-2); &#125;; for(var i=0;i&lt;=10;i+=1)&#123; console.log(fib(i)); &#125; 方法3 使用“记忆”方法减少运算量。在一个数组里保存我们的储存结果，储存结果隐藏在闭包中. 123456789101112131415161718192021222324252627 var fibonaci=function()&#123; var memo=[0,1]; var fib=function(n)&#123; var result=memo[n]; if(typeof result!=='number')&#123; result=fib(n-1)+fib(n-2); &#125;; return result; &#125;; return fib; &#125;();// 我们可以把这种技术推而广之//编写一个函数来帮助我们构造带记忆功能的函数. var memoizer=function(memo,formula)&#123; var recur=function(n)&#123; var result=memo[n]; if(typeof result!=='number')&#123; result=formula(recur,n); memo[n]=result; &#125;; return result; &#125;; return recur; &#125;; var fib=memoizer([0,1],function(recur,n)&#123; return recur(n-1)+recur(n-2); &#125;) 方法4 使用ES6中的generator 1234567891011function* fib(x)&#123; let a=1; let b=1; let n=0; while(n&lt;=x)&#123; yield a; [a,b]=[b,a+b]; n++; &#125;&#125;console.log(fib(5));]]></content>
+      <categories>
+        <category>javaScript</category>
+      </categories>
+      <tags>
+        <tag>javaScript</tag>
       </tags>
   </entry>
 </search>
