@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[JS实现抽奖大转盘]]></title>
+    <title><![CDATA[jQuery $.extend()使用方法总结]]></title>
+    <url>%2F2019%2F01%2F14%2FjQuery-extend()%2F</url>
+    <content type="text"><![CDATA[extend能实现的功能将一个或多个对象的内容合并到目标对象。语法： $.extend( target [, object1 ] [, objectN ] )；$.extend( [deep ], target, object1 [, objectN ] ) deep： 可选。 Boolean类型 指示是否深度合并对象，默认为false。如果该值为true，且多个对象的某个同名属性也都是对象，则该”属性对象”的属性也将进行合并。 target： Object类型 目标对象，其他对象的成员属性将被附加到该对象上。 object1：可选。 Object类型 第一个被合并的对象。 objectN：可选。 Object类型 第N个被合并的对象。注意： 如果只为$.extend()指定了一个参数，则意味着参数target被省略。此时，target就是jQuery对象本身。通过这种方式，我们可以为全局对象jQuery添加新的函数。 如果多个对象具有相同的属性，则后者会覆盖前者的属性值。 举例： $.extend(object1, object2); //object2 合并到 object1 中 多传几个参数： 123456789101112131415161718192021function test(target,obj1,obj2,obj3)&#123; $.extend(target,obj1,obj2,obj3); return target;&#125;;var target=&#123; name:&apos;jack&apos;, sex:&apos;male&apos;&#125;;var obj1=&#123; name:&quot;rose&quot;, age:20&#125;;var obj2=&#123; sex:&apos;female&apos;, age:24&#125;;var obj3=&#123; bb:&apos;you jump i jump&apos;&#125;;console.log(test(target,obj1,obj2,obj3));//Object &#123; name: &quot;rose&quot;, sex: &quot;female&quot;, age: 24, bb: &quot;you jump i jump&quot; &#125; 这里我们传入了4个参数，然后返回第一个参数的值。从运行的得到结果我们可以看到，属性值永远是最后一个属性的值。我们稍微修改一部分代码： 123 var res=$.extend(target,obj1,obj2,obj3); return res;结果返回依然是Object &#123; name: &quot;rose&quot;, sex: &quot;female&quot;, age: 24, bb: &quot;you jump i jump&quot; &#125; 所以$.extend()的返回值是第一个参数的值。如果我们不想修改参数的值，我们可以把传入一个空对象： $.extend({ },target,obj1,obj2,obj3); 为jQuery开发插件提供方法如果只有一个参数提供给$.extend()，在这种情况下，jQuery对象本身被默认为目标对象。这样，我们可以在jQuery的命名空间下添加新的功能。这对于插件开发者希望向 jQuery 中添加新函数时是很有用的。 jQuery.extend(object)： 为jQuery类本身添加类方法，可以理解为添加静态方法。 12345678$.extend(&#123; hello:function()&#123; return &quot;hello&quot;+this._name; &#125;, _name:&apos;jack&apos;&#125;)console.log($._name,$.hello());//jack hellojack jQuery.fn.extend(object);给jQuery对象添加方法。。jQuery类的实例才可以调用这个“成员函数”。为什么呢我们先看： 1234jQuery.fn = jQuery.prototype = &#123; init: function( selector, context ) &#123;//….//……&#125;; ．ｆｎ属性是在原型上的，所以只有实例化出来的jQuery可以调用你ｅｘｔｅｎｄ里想添加的方法。 比如我们要开发一个插件，做一个特殊的编辑框，当它被点击时，便alert 当前编辑框里的内容。可以这么做： 123456789$.fn.extend(&#123; alertWhileClick: function() &#123; $(this).click(function() &#123; alert($(this).val()); &#125;); &#125;&#125;);//$(&quot;#input1&quot;)是jQuery的实例，调用这个扩展方法$(&quot;#input1&quot;).alertWhileClick();]]></content>
+      <categories>
+        <category>jQuery</category>
+      </categories>
+      <tags>
+        <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[原生JS实现抽奖大转盘]]></title>
     <url>%2F2019%2F01%2F11%2Fstar_js%2F</url>
     <content type="text"><![CDATA[因为用到自定义字体，我首先到阿里巴巴矢量图标库下载了自己喜欢的星星样式。需要一个空心星星，一个实心星星。 按照使用方法，如下图所示引入这些文件。 接下来是布局，三行评价，都是一样的样式，那就用一个无序列表吧！ 1234567891011121314151617181920212223242526272829&lt;ul&gt; &lt;li class="goods"&gt; 宝贝与描述相符： &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt; &lt;/li&gt; &lt;li class="att"&gt; 卖家的服务态度： &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt; &lt;/li&gt; &lt;li class="trans"&gt; 物流服务的质量： &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;i class="star"&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt; &lt;/li&gt;&lt;/ul&gt; 给star类加了一个伪类用来显示星星图标： 12345678910111213141516 .star:after&#123; font-family: 'Hui-iconfont'; font-size:25px; font-style:normal; content:"\e702"; vertical-align:middle;/*使文字和图标对齐*/ color:#eee; &#125;下面这是实心星星的： .current:after&#123; font-family: 'Hui-iconfont'; font-size:25px; font-style:normal; content:"\e6ff"; vertical-align:middle; &#125; 布局完是这样的：下面开始写js. 1234567891011121314151617181920212223242526272829303132333435363738function comment(liName,content)&#123; var li=document.getElementsByClassName(liName)[0]; var star=li.getElementsByTagName("i"); var currentClick=0,num=0; for(var i=1;i&lt;=star.length;i++)&#123; star[i-1].index=i; star[i-1].onmouseover=function()&#123; show(this.index); &#125; star[i-1].onmouseout=function()&#123; //选择i=1；就是为了把0让给这一步，鼠标移开不显示实星星。 show(0); &#125; star[i-1].onclick=function()&#123; currentClick=this.index; show(currentClick); &#125; &#125; function show(index)&#123; //当点击后，又经过又离开，传递参数0；但短路语句直接返回currentClick,以此保证点击之后再经过也不改变。 num=index||currentClick; for(var j=0;j&lt;star.length;j++)&#123; star[j].className=(j&lt;num)?'current':'star'; if(num==1||num==2)&#123; star[j].style.color="#666" &#125; else if(num==3||num==4)&#123; star[j].style.color="orange"; &#125; else&#123; star[j].style.color="red"; &#125; &#125; li.getElementsByTagName("em")[0].innerText=num&gt;0?content[num-1]:""; &#125;&#125;var arr=["一分 失望","两分 不满","三分 一般","四分 满意","五分 惊喜"];comment("goods",arr);comment("att",arr);comment("trans",arr) 就可以实现基本的效果啦！]]></content>
       <categories>
@@ -19,8 +30,8 @@
         <category>jQuery</category>
       </categories>
       <tags>
-        <tag>Dom</tag>
         <tag>jQuery</tag>
+        <tag>Dom</tag>
       </tags>
   </entry>
   <entry>
