@@ -105,16 +105,20 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="No such thing as a life, that&apos;s better than yours.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bai&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/Git/index.html">
+  <meta name="description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
+<meta name="keywords" content="设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单例模式学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/singleEg/index.html">
 <meta property="og:site_name" content="Bai&#39;s blog">
-<meta property="og:description" content="No such thing as a life, that&apos;s better than yours.">
+<meta property="og:description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-01-21T14:59:43.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bai&#39;s blog">
-<meta name="twitter:description" content="No such thing as a life, that&apos;s better than yours.">
+<meta name="twitter:title" content="单例模式学习笔记">
+<meta name="twitter:description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
 
 
 
@@ -123,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Git/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/21/singleEg/">
 
 
 
@@ -133,7 +137,7 @@
   };
 </script>
 
-  <title>Tag: Git | Bai's blog</title>
+  <title>单例模式学习笔记 | Bai's blog</title>
   
 
 
@@ -181,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/Bai404" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -253,7 +257,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -358,82 +362,290 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Git<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/21/singleEg/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bai">
+      <meta itemprop="description" content="No such thing as a life, that's better than yours.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bai's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/01/06/Git/" itemprop="url">
-            
-              <span itemprop="name">Git新手使用总结</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">单例模式学习笔记
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-06T18:54:37+08:00" content="2019-01-06">
-          01-06
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-21 22:57:40 / Modified: 22:59:43" itemprop="dateCreated datePublished" datetime="2019-01-21T22:57:40+08:00">2019-01-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Basics/" itemprop="url" rel="index"><span itemprop="name">Computer Basics</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/21/singleEg/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/21/singleEg/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。<img src="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<hr>
+<h3 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h3><p>首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。<br>可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账号注销。这就是单例模式的生动体现。</p>
+<h3 id="单例模式的思路"><a href="#单例模式的思路" class="headerlink" title="单例模式的思路"></a>单例模式的思路</h3><p> 一个类能返回一个对象的引用（并且永远是同一个）和一个获得该实例的方法（静态方法，通常使用 getInstance 名称）。那么当我们调用这个方法时，如果类持有的引用不为空就返回该引用，否者就创建该类的实例，并且将实例引用赋值给该类保持的那个引用再返回。同时将该类的构造函数定义为私有方法，避免其他函数使用该构造函数来实例化对象，只通过该类的静态方法来得到该类的唯一实例。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li>意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。<ul>
+<li>主要解决：一个全局使用的类频繁地创建与销毁。</li>
+</ul>
+</li>
+<li>何时使用：当您想控制实例数目，节省系统资源的时候。</li>
+<li>如何解决：判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</li>
+<li>关键代码：构造函数是私有的。</li>
+<li>应用实例： 1、一个党只能有一个书记。 2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。 3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。</li>
+<li>优点： 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。 2、避免对资源的多重占用（比如写文件操作）。</li>
+<li>缺点：没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。</li>
+<li>使用场景： 1、要求生产唯一序列号。 2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。 3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。</li>
+<li>注意事项：getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。</li>
+</ul>
+<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><p>例如jQuery库的命名空间为jQuery或$。命名空间的使用是为了让代码更加整洁，在多人协作开发的情况下，不同的人定义的变量很有可能重复，此时就需要使用命名空间来约束每个人定义的变量，使相同名称的变量放在不同的命名空间中，避免相互干扰。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// A程序员的命名空间</span><br><span class="line">var A = &#123;</span><br><span class="line">  get: function(id)&#123;</span><br><span class="line">    return document.getElementById(id);</span><br><span class="line">  &#125;</span><br><span class="line">  css: function(id,key,value)&#123;</span><br><span class="line">    get(id).style[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// B程序员的命名空间</span><br><span class="line">var B = &#123;</span><br><span class="line">  get: function(className)&#123;</span><br><span class="line">    return document.getElementByClassName(className)[0];</span><br><span class="line">  &#125;</span><br><span class="line">  css: function(className,key,value)&#123;</span><br><span class="line">    get(className).style[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>A、    B两个命名空间中都有一个get方法和一个css方法，用于元素获取和元素样式修改，不同的是A是通过id来获取元素，而B是通过class来获取元素，通过命名空间，可以使这些相同名称的方法共存，使用时指定相应的命名空间即可。</p>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>JavaScript中并没有final、static这类关键字用来定义常量，但JavaScript非常灵活，通过常量只能访问不能修改这一特点，我们可以将变量保存在函数内部，并且只提供获取变量的方法，不提供设置变量的方法，通过闭包的方式使函数执行一次并返回相应的访问方法对象，最后将这个对象放在全局空间中作为常量单例对象使用。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var Color = (function()&#123;</span><br><span class="line">  // 私有变量</span><br><span class="line">  var color = &#123;</span><br><span class="line">    &apos;RED&apos;: &apos;#ff0000&apos;,</span><br><span class="line">    &apos;YELLOW&apos;: &apos;#ffff00&apos;,</span><br><span class="line">    &apos;BLUE&apos;: &apos;#0000ff&apos;</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回访问方法对象</span><br><span class="line">  return &#123;</span><br><span class="line">    // 常量获取方法</span><br><span class="line">    get: function(name)&#123;</span><br><span class="line">      return color[name] ? color[name] : null;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">var color = Color.get(&apos;BLUE&apos;);</span><br><span class="line">console.log(color);  // #0000ff</span><br></pre></td></tr></table></figure>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><h4 id="实现1：-最简单的对象字面量"><a href="#实现1：-最简单的对象字面量" class="headerlink" title="实现1： 最简单的对象字面量"></a>实现1： 最简单的对象字面量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var singleton = &#123;</span><br><span class="line">        attr : 1,</span><br><span class="line">        method : function()&#123; return this.attr; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">var t1 = singleton ;</span><br><span class="line">var t2 = singleton ;</span><br><span class="line">    那么很显然的， t1 === t2 。</span><br></pre></td></tr></table></figure>
+<p>  十分简单，并且非常使用，不足之处在于没有什么封装性，所有的属性方法都是暴露的。对于一些需要使用私有变量的情况就显得心有余而力不足了。当然在对于 this 的问题上也是有一定弊端的。</p>
+<h4 id="实现2：构造函数内部判断"><a href="#实现2：构造函数内部判断" class="headerlink" title="实现2：构造函数内部判断"></a>实现2：构造函数内部判断</h4><p> 其实和最初的JS实现有点类似，不过是将对是否已经存在该类的实例的判断放入构造函数内部。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Construct()&#123;</span><br><span class="line">    // 确保只有单例</span><br><span class="line">    if( Construct.unique !== undefined )&#123;</span><br><span class="line">        return Construct.unique;</span><br><span class="line">    &#125;</span><br><span class="line">    // 其他代码</span><br><span class="line">    this.name = &quot;NYF&quot;;</span><br><span class="line">    this.age=&quot;24&quot;;</span><br><span class="line">    Construct.unique = this;</span><br><span class="line">&#125;</span><br><span class="line">var t1 = new Construct() ;</span><br><span class="line">var t2 = new Construct() ;</span><br><span class="line">    那么也有的， t1 === t2 。</span><br></pre></td></tr></table></figure></p>
+<p>也是非常简单，无非就是提出一个属性来做判断，但是该方式也没有安全性，一旦我在外部修改了Construct的unique属性，那么单例模式也就被破坏了。</p>
+<h4 id="实现3-闭包方式"><a href="#实现3-闭包方式" class="headerlink" title="实现3 : 闭包方式"></a>实现3 : 闭包方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var single = (function()&#123;</span><br><span class="line">    var unique;</span><br><span class="line">    function Construct()&#123;</span><br><span class="line">        // ... 生成单例的构造函数的代码</span><br><span class="line">    &#125;</span><br><span class="line">    unique = new Constuct();</span><br><span class="line">    return unique;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>只要每次将var t1 = single; var t2 = single;即可。 与对象字面量方式类似。不过相对而言更安全一点，当然也不是绝对安全。<br>    如果希望会用调用 single() 方式来使用，那么也只需要将内部的 return 改为</p>
+<pre><code>return function(){
+    return unique;
+}
+以上方式也可以使用 new 的方式来进行（形式主义的赶脚）。当然这边只是给了闭包的一种例子而已，也可以在 Construct 中判断单例是否存在 等等。 各种方式在各个不同情况做好选着即可。
+</code></pre><blockquote>
+<p>使用数据缓存来存储该单例，用作判断单例是否已经生成，是单例模式主要的实现思路。</p>
+</blockquote>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+  <div>
+    
+      <div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">------------- 本文结束 <i class="fa fa-car"></i> 感谢您的阅读-------------</div>
+
+</div>
+
+    
+  </div>
+
+  <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/01/21/singleEg/">单例模式学习笔记</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Bai 的个人博客">Bai</a></p>
+  <p><span>发布时间:</span>2019年01月21日 - 22:01</p>
+  <p><span>最后更新:</span>2019年01月21日 - 22:01</p>
+  <p><span>原始链接:</span><a href="/2019/01/21/singleEg/" title="单例模式学习笔记">http://yoursite.com/2019/01/21/singleEg/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/01/21/singleEg/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+        });
+    });
+</script>
+
+      
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/14/zoom/" rel="next" title="原生JS购物网站商品放大镜功能">
+                <i class="fa fa-chevron-left"></i> 原生JS购物网站商品放大镜功能
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -454,8 +666,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -605,6 +826,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式介绍"><span class="nav-number">1.</span> <span class="nav-text">单例模式介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式的思路"><span class="nav-number">2.</span> <span class="nav-text">单例模式的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">3.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间"><span class="nav-number">4.</span> <span class="nav-text">命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">5.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现方式"><span class="nav-number">6.</span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现1：-最简单的对象字面量"><span class="nav-number">6.1.</span> <span class="nav-text">实现1： 最简单的对象字面量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现2：构造函数内部判断"><span class="nav-number">6.2.</span> <span class="nav-text">实现2：构造函数内部判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现3-闭包方式"><span class="nav-number">6.3.</span> <span class="nav-text">实现3 : 闭包方式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -752,6 +990,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
