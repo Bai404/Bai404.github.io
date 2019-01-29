@@ -105,20 +105,24 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
-<meta name="keywords" content="设计模式">
+  <meta name="description" content="什么是WebpackWebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。 为什要使用WebPack现今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单例模式学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/01/21/singleEg/index.html">
+<meta property="og:title" content="webpack4学习笔记一">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/webpack41/index.html">
 <meta property="og:site_name" content="Bai&#39;s blog">
-<meta property="og:description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
+<meta property="og:description" content="什么是WebpackWebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。 为什要使用WebPack现今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-21T14:59:43.093Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128001838997.PNG">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128002223748.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128002122940.PNG">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128002953151.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128012022554.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-01-29T15:52:28.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单例模式学习笔记">
-<meta name="twitter:description" content="今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。  单例模式介绍首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="webpack4学习笔记一">
+<meta name="twitter:description" content="什么是WebpackWebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。 为什要使用WebPack现今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190128001838997.PNG">
 
 
 
@@ -127,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/21/singleEg/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/29/webpack41/">
 
 
 
@@ -137,7 +141,7 @@
   };
 </script>
 
-  <title>单例模式学习笔记 | Bai's blog</title>
+  <title>webpack4学习笔记一 | Bai's blog</title>
   
 
 
@@ -382,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/21/singleEg/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/webpack41/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bai">
@@ -399,7 +403,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">单例模式学习笔记
+          <h1 class="post-title" itemprop="name headline">webpack4学习笔记一
 
               
             
@@ -425,7 +429,7 @@
                 
               
 
-              <time title="Created: 2019-01-21 22:57:40 / Modified: 22:59:43" itemprop="dateCreated datePublished" datetime="2019-01-21T22:57:40+08:00">2019-01-21</time>
+              <time title="Created: 2019-01-29 23:48:31 / Modified: 23:52:28" itemprop="dateCreated datePublished" datetime="2019-01-29T23:48:31+08:00">2019-01-29</time>
             
 
             
@@ -447,7 +451,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Basics/" itemprop="url" rel="index"><span itemprop="name">Computer Basics</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a></span>
 
                 
                 
@@ -462,8 +466,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/21/singleEg/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/21/singleEg/" itemprop="commentCount"></span>
+                <a href="/2019/01/29/webpack41/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/29/webpack41/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -491,42 +495,40 @@
       
 
       
-        <p>今天的学习jquery组件开发时候例子使用了单例模式，所以总结了一些相关知识。<img src="https://img-blog.csdnimg.cn/20190119113536797.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<hr>
-<h3 id="单例模式介绍"><a href="#单例模式介绍" class="headerlink" title="单例模式介绍"></a>单例模式介绍</h3><p>首先什么是单例模式？可以这样理解：单例模式旨在保证一个类仅有一个实例，并提供一个全局的访问点。<br>可能有人还是不太理解单例的概念，那么你可以想象生活中的一些例子。比如注册账号的时候，如果我们注册的账号已经存在，那么系统会提示我们“账号已经存在是否使用该账号登陆”，我们无法再次创建一个一模一样的账号，除非把原账号注销。这就是单例模式的生动体现。</p>
-<h3 id="单例模式的思路"><a href="#单例模式的思路" class="headerlink" title="单例模式的思路"></a>单例模式的思路</h3><p> 一个类能返回一个对象的引用（并且永远是同一个）和一个获得该实例的方法（静态方法，通常使用 getInstance 名称）。那么当我们调用这个方法时，如果类持有的引用不为空就返回该引用，否者就创建该类的实例，并且将实例引用赋值给该类保持的那个引用再返回。同时将该类的构造函数定义为私有方法，避免其他函数使用该构造函数来实例化对象，只通过该类的静态方法来得到该类的唯一实例。</p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
-<li>意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。<ul>
-<li>主要解决：一个全局使用的类频繁地创建与销毁。</li>
-</ul>
-</li>
-<li>何时使用：当您想控制实例数目，节省系统资源的时候。</li>
-<li>如何解决：判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</li>
-<li>关键代码：构造函数是私有的。</li>
-<li>应用实例： 1、一个党只能有一个书记。 2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。 3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。</li>
-<li>优点： 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。 2、避免对资源的多重占用（比如写文件操作）。</li>
-<li>缺点：没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。</li>
-<li>使用场景： 1、要求生产唯一序列号。 2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。 3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。</li>
-<li>注意事项：getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。</li>
-</ul>
-<h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><p>例如jQuery库的命名空间为jQuery或$。命名空间的使用是为了让代码更加整洁，在多人协作开发的情况下，不同的人定义的变量很有可能重复，此时就需要使用命名空间来约束每个人定义的变量，使相同名称的变量放在不同的命名空间中，避免相互干扰。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// A程序员的命名空间</span><br><span class="line">var A = &#123;</span><br><span class="line">  get: function(id)&#123;</span><br><span class="line">    return document.getElementById(id);</span><br><span class="line">  &#125;</span><br><span class="line">  css: function(id,key,value)&#123;</span><br><span class="line">    get(id).style[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// B程序员的命名空间</span><br><span class="line">var B = &#123;</span><br><span class="line">  get: function(className)&#123;</span><br><span class="line">    return document.getElementByClassName(className)[0];</span><br><span class="line">  &#125;</span><br><span class="line">  css: function(className,key,value)&#123;</span><br><span class="line">    get(className).style[key] = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>A、    B两个命名空间中都有一个get方法和一个css方法，用于元素获取和元素样式修改，不同的是A是通过id来获取元素，而B是通过class来获取元素，通过命名空间，可以使这些相同名称的方法共存，使用时指定相应的命名空间即可。</p>
-<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>JavaScript中并没有final、static这类关键字用来定义常量，但JavaScript非常灵活，通过常量只能访问不能修改这一特点，我们可以将变量保存在函数内部，并且只提供获取变量的方法，不提供设置变量的方法，通过闭包的方式使函数执行一次并返回相应的访问方法对象，最后将这个对象放在全局空间中作为常量单例对象使用。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var Color = (function()&#123;</span><br><span class="line">  // 私有变量</span><br><span class="line">  var color = &#123;</span><br><span class="line">    &apos;RED&apos;: &apos;#ff0000&apos;,</span><br><span class="line">    &apos;YELLOW&apos;: &apos;#ffff00&apos;,</span><br><span class="line">    &apos;BLUE&apos;: &apos;#0000ff&apos;</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回访问方法对象</span><br><span class="line">  return &#123;</span><br><span class="line">    // 常量获取方法</span><br><span class="line">    get: function(name)&#123;</span><br><span class="line">      return color[name] ? color[name] : null;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">var color = Color.get(&apos;BLUE&apos;);</span><br><span class="line">console.log(color);  // #0000ff</span><br></pre></td></tr></table></figure>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><h4 id="实现1：-最简单的对象字面量"><a href="#实现1：-最简单的对象字面量" class="headerlink" title="实现1： 最简单的对象字面量"></a>实现1： 最简单的对象字面量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var singleton = &#123;</span><br><span class="line">        attr : 1,</span><br><span class="line">        method : function()&#123; return this.attr; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">var t1 = singleton ;</span><br><span class="line">var t2 = singleton ;</span><br><span class="line">    那么很显然的， t1 === t2 。</span><br></pre></td></tr></table></figure>
-<p>  十分简单，并且非常使用，不足之处在于没有什么封装性，所有的属性方法都是暴露的。对于一些需要使用私有变量的情况就显得心有余而力不足了。当然在对于 this 的问题上也是有一定弊端的。</p>
-<h4 id="实现2：构造函数内部判断"><a href="#实现2：构造函数内部判断" class="headerlink" title="实现2：构造函数内部判断"></a>实现2：构造函数内部判断</h4><p> 其实和最初的JS实现有点类似，不过是将对是否已经存在该类的实例的判断放入构造函数内部。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Construct()&#123;</span><br><span class="line">    // 确保只有单例</span><br><span class="line">    if( Construct.unique !== undefined )&#123;</span><br><span class="line">        return Construct.unique;</span><br><span class="line">    &#125;</span><br><span class="line">    // 其他代码</span><br><span class="line">    this.name = &quot;NYF&quot;;</span><br><span class="line">    this.age=&quot;24&quot;;</span><br><span class="line">    Construct.unique = this;</span><br><span class="line">&#125;</span><br><span class="line">var t1 = new Construct() ;</span><br><span class="line">var t2 = new Construct() ;</span><br><span class="line">    那么也有的， t1 === t2 。</span><br></pre></td></tr></table></figure></p>
-<p>也是非常简单，无非就是提出一个属性来做判断，但是该方式也没有安全性，一旦我在外部修改了Construct的unique属性，那么单例模式也就被破坏了。</p>
-<h4 id="实现3-闭包方式"><a href="#实现3-闭包方式" class="headerlink" title="实现3 : 闭包方式"></a>实现3 : 闭包方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var single = (function()&#123;</span><br><span class="line">    var unique;</span><br><span class="line">    function Construct()&#123;</span><br><span class="line">        // ... 生成单例的构造函数的代码</span><br><span class="line">    &#125;</span><br><span class="line">    unique = new Constuct();</span><br><span class="line">    return unique;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>只要每次将var t1 = single; var t2 = single;即可。 与对象字面量方式类似。不过相对而言更安全一点，当然也不是绝对安全。<br>    如果希望会用调用 single() 方式来使用，那么也只需要将内部的 return 改为</p>
-<pre><code>return function(){
-    return unique;
-}
-以上方式也可以使用 new 的方式来进行（形式主义的赶脚）。当然这边只是给了闭包的一种例子而已，也可以在 Construct 中判断单例是否存在 等等。 各种方式在各个不同情况做好选着即可。
-</code></pre><blockquote>
-<p>使用数据缓存来存储该单例，用作判断单例是否已经生成，是单例模式主要的实现思路。</p>
+        <h2 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack"></a>什么是Webpack</h2><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。</p>
+<h2 id="为什要使用WebPack"><a href="#为什要使用WebPack" class="headerlink" title="为什要使用WebPack"></a>为什要使用WebPack</h2><p>现今的很多网页其实可以看做是功能丰富的应用，它们拥有着复杂的JavaScript代码和一大堆依赖包。为了简化开发的复杂度，前端社区涌现出了很多好的实践方法</p>
+<ul>
+<li>模块化，让我们可以把复杂的程序细化为小的文件;</li>
+<li>类似于TypeScript这种在JavaScript基础上拓展的开发语言：使我们能够实现目前版本的JavaScript不能直接使用的特性，并且之后还能转换为JavaScript文件使浏览器可以识别；</li>
+<li>Scss，less等CSS预处理器<br>…<br>这些改进确实大大的提高了我们的开发效率，但是利用它们开发的文件往往需要进行额外的处理才能让浏览器识别,而手动处理又是非常繁琐的，这就为WebPack类的工具的出现提供了需求。<h2 id="学习使用Webpack。"><a href="#学习使用Webpack。" class="headerlink" title="学习使用Webpack。"></a>学习使用Webpack。</h2><h3 id="创建一个bundle文件"><a href="#创建一个bundle文件" class="headerlink" title="创建一个bundle文件"></a>创建一个bundle文件</h3>先创建一个用于学习的测试目录，初始化 npm，<blockquote>
+<p>npm init -y<br>使用npm init命令可以自动创建package.json文件,这是一个标准的npm说明文件，里面蕴含了丰富的信息，包括当前项目的依赖模块，自定义的脚本任务等等。</p>
 </blockquote>
+</li>
+</ul>
+<p>然后在本地安装webpack</p>
+<blockquote>
+<p>npm install –save-dev webpack<br>太慢了 我推荐用淘宝镜像- -！！！cnpm</p>
+</blockquote>
+<p>==因为使用的是webpack 4+ 版本，还需要安装 CLI。==</p>
+<blockquote>
+<p>npm install –save-dev webpack-cli</p>
+</blockquote>
+<p>在我们的项目目录下，创建两个文件夹,src文件夹和dist文件夹，src文件夹用来存放原始数据和我们将写的JavaScript模块，dist文件夹用来存放之后供浏览器读取的文件（包括使用webpack打包生成的js文件以及一个index.html文件）。</p>
+<p>然后在public文件夹中创建index.html，在app文件夹中创建index.js。</p>
+<p>这个例子在index.js中使用lodash 依赖，我们需要在本地安装 library：</p>
+<blockquote>
+<p>npm install –save lodash</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20190128001838997.PNG" alt="在这里插入图片描述"><br>index.js：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">'lodash'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">component</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> element=<span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">    element.innerHTML=_.join([<span class="string">'hello'</span>,<span class="string">'webpack'</span>,<span class="string">' '</span>]);</span><br><span class="line">    <span class="keyword">return</span> element;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(component());</span><br></pre></td></tr></table></figure>
+<p>index.js 显式要求引入的 lodash 必须存在，然后将它绑定为 _（没有全局作用域污染）。通过声明模块所需的依赖，webpack 能够利用这些信息去构建依赖图，然后使用图生成一个优化过的，会以正确顺序执行的 bundle。</p>
+<p>index.html：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>webpack-demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"main.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>执行 npx webpack，会将我们的脚本作为入口起点，然后 输出 为 main.js。<br><img src="https://img-blog.csdnimg.cn/20190128002223748.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190128002122940.PNG" alt="在这里插入图片描述"></p>
+<p>运行index.html<br><img src="https://img-blog.csdnimg.cn/20190128002953151.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="使用一个配置文件"><a href="#使用一个配置文件" class="headerlink" title="使用一个配置文件"></a>使用一个配置文件</h3><p>在 webpack 4 中，可以无须任何配置使用，然而大多数项目会需要很复杂的设置，这就是为什么 webpack 仍然要支持 配置文件。<br>我们创建webpack.config.js<br>webpack.config.js：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">'dist'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//“__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录。</span></span><br></pre></td></tr></table></figure>
+<p>现在，让我们通过新配置文件再次执行构建：<br><img src="https://img-blog.csdnimg.cn/20190128012022554.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>比起 CLI 这种简单直接的使用方式，配置文件具有更多的灵活性。我们可以通过配置方式指定 loader 规则(loader rules)、插件(plugins)、解析选项(resolve options)，以及许多其他增强功能。</p>
 
       
     </div>
@@ -557,12 +559,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/01/21/singleEg/">单例模式学习笔记</a></p>
+  <p><span>本文标题:</span><a href="/2019/01/29/webpack41/">webpack4学习笔记一</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Bai 的个人博客">Bai</a></p>
-  <p><span>发布时间:</span>2019年01月21日 - 22:01</p>
-  <p><span>最后更新:</span>2019年01月21日 - 22:01</p>
-  <p><span>原始链接:</span><a href="/2019/01/21/singleEg/" title="单例模式学习笔记">http://yoursite.com/2019/01/21/singleEg/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/01/21/singleEg/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年01月29日 - 23:01</p>
+  <p><span>最后更新:</span>2019年01月29日 - 23:01</p>
+  <p><span>原始链接:</span><a href="/2019/01/29/webpack41/" title="webpack4学习笔记一">http://yoursite.com/2019/01/29/webpack41/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/01/29/webpack41/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -596,7 +598,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
           
         </div>
       
@@ -609,8 +611,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/14/zoom/" rel="next" title="原生JS购物网站商品放大镜功能">
-                <i class="fa fa-chevron-left"></i> 原生JS购物网站商品放大镜功能
+              <a href="/2019/01/27/Lunbo1 (2)/" rel="next" title="原生JS实现简单动态轮播（二）">
+                <i class="fa fa-chevron-left"></i> 原生JS实现简单动态轮播（二）
               </a>
             
           </div>
@@ -619,8 +621,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/23/Lunbo/" rel="prev" title="原生JS实现动态轮播（一）无缝轮播">
-                原生JS实现动态轮播（一）无缝轮播 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/29/package control/" rel="prev" title="package control出现错误时怎样让sublime text3支持Vue语法高亮显示">
+                package control出现错误时怎样让sublime text3支持Vue语法高亮显示 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -850,7 +852,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式介绍"><span class="nav-number">1.</span> <span class="nav-text">单例模式介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式的思路"><span class="nav-number">2.</span> <span class="nav-text">单例模式的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">3.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间"><span class="nav-number">4.</span> <span class="nav-text">命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">5.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现方式"><span class="nav-number">6.</span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现1：-最简单的对象字面量"><span class="nav-number">6.1.</span> <span class="nav-text">实现1： 最简单的对象字面量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现2：构造函数内部判断"><span class="nav-number">6.2.</span> <span class="nav-text">实现2：构造函数内部判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现3-闭包方式"><span class="nav-number">6.3.</span> <span class="nav-text">实现3 : 闭包方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Webpack"><span class="nav-number">1.</span> <span class="nav-text">什么是Webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什要使用WebPack"><span class="nav-number">2.</span> <span class="nav-text">为什要使用WebPack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习使用Webpack。"><span class="nav-number">3.</span> <span class="nav-text">学习使用Webpack。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个bundle文件"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个bundle文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用一个配置文件"><span class="nav-number">3.2.</span> <span class="nav-text">使用一个配置文件</span></a></li></ol></li></ol></div>
             
 
           </div>
