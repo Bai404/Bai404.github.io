@@ -105,20 +105,20 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="效果图：先看布局的代码： 123456789101112&amp;lt;div class=&quot;banner&quot;&amp;gt;   &amp;lt;ul class=&quot;clear&quot; style=&quot;left:-100%;&quot; &amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;yy.jpg&quot;&amp;gt;&amp;lt;/li&amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;3.jpg&quot;&amp;gt;&amp;lt;">
-<meta name="keywords" content="javaScript">
+  <meta name="description" content="MVP模式模型-视图-表示器，也就是MVP模式。是mvc模式的一种衍生模式，专注于改进表示逻辑。 MModule，模型层，用户数据管理，通常是一些 javaBean, db,sharePreference,network,图片处理等耗时操作均应该放在该层。 VView，视图层,一般指的是四大组件，四大组件对作为View，来完成应用程序界面的展示 PPresenter 控制层，也叫中间层。相当于一个">
+<meta name="keywords" content="MVP,MVVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生JS实现简单动态轮播（二）">
-<meta property="og:url" content="http://yoursite.com/2019/01/27/Lunbo1 (2)/index.html">
+<meta property="og:title" content="MVP模式和MVVM模式学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/02/02/MVP/index.html">
 <meta property="og:site_name" content="Bai&#39;s blog">
-<meta property="og:description" content="效果图：先看布局的代码： 123456789101112&amp;lt;div class=&quot;banner&quot;&amp;gt;   &amp;lt;ul class=&quot;clear&quot; style=&quot;left:-100%;&quot; &amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;yy.jpg&quot;&amp;gt;&amp;lt;/li&amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;3.jpg&quot;&amp;gt;&amp;lt;">
+<meta property="og:description" content="MVP模式模型-视图-表示器，也就是MVP模式。是mvc模式的一种衍生模式，专注于改进表示逻辑。 MModule，模型层，用户数据管理，通常是一些 javaBean, db,sharePreference,network,图片处理等耗时操作均应该放在该层。 VView，视图层,一般指的是四大组件，四大组件对作为View，来完成应用程序界面的展示 PPresenter 控制层，也叫中间层。相当于一个">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190125130820427.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-27T15:39:36.001Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019020108524532.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-02-02T15:34:29.730Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生JS实现简单动态轮播（二）">
-<meta name="twitter:description" content="效果图：先看布局的代码： 123456789101112&amp;lt;div class=&quot;banner&quot;&amp;gt;   &amp;lt;ul class=&quot;clear&quot; style=&quot;left:-100%;&quot; &amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;yy.jpg&quot;&amp;gt;&amp;lt;/li&amp;gt;        &amp;lt;li&amp;gt;&amp;lt;img src=&quot;3.jpg&quot;&amp;gt;&amp;lt;">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190125130820427.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="MVP模式和MVVM模式学习笔记">
+<meta name="twitter:description" content="MVP模式模型-视图-表示器，也就是MVP模式。是mvc模式的一种衍生模式，专注于改进表示逻辑。 MModule，模型层，用户数据管理，通常是一些 javaBean, db,sharePreference,network,图片处理等耗时操作均应该放在该层。 VView，视图层,一般指的是四大组件，四大组件对作为View，来完成应用程序界面的展示 PPresenter 控制层，也叫中间层。相当于一个">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019020108524532.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70">
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/27/Lunbo1 (2)/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/02/MVP/">
 
 
 
@@ -137,7 +137,7 @@
   };
 </script>
 
-  <title>原生JS实现简单动态轮播（二） | Bai's blog</title>
+  <title>MVP模式和MVVM模式学习笔记 | Bai's blog</title>
   
 
 
@@ -382,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/27/Lunbo1 (2)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/02/MVP/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bai">
@@ -399,7 +399,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原生JS实现简单动态轮播（二）
+          <h1 class="post-title" itemprop="name headline">MVP模式和MVVM模式学习笔记
 
               
             
@@ -425,7 +425,7 @@
                 
               
 
-              <time title="Created: 2019-01-27 23:37:23 / Modified: 23:39:36" itemprop="dateCreated datePublished" datetime="2019-01-27T23:37:23+08:00">2019-01-27</time>
+              <time title="Created: 2019-02-02 23:32:08 / Modified: 23:34:29" itemprop="dateCreated datePublished" datetime="2019-02-02T23:32:08+08:00">2019-02-02</time>
             
 
             
@@ -447,7 +447,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javaScript/" itemprop="url" rel="index"><span itemprop="name">javaScript</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Basics/" itemprop="url" rel="index"><span itemprop="name">Computer Basics</span></a></span>
 
                 
                 
@@ -462,8 +462,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/27/Lunbo1 (2)/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/27/Lunbo1 (2)/" itemprop="commentCount"></span>
+                <a href="/2019/02/02/MVP/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/02/02/MVP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -491,13 +491,22 @@
       
 
       
-        <p>效果图：<img src="https://img-blog.csdnimg.cn/20190125130820427.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>先看布局的代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"banner"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"clear"</span> <span class="attr">style</span>=<span class="string">"left:-100%;"</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"yy.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"3.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"5.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"yy.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"3.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pageNav"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftBtn"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rightBtn"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>可以看出这个轮播和我的前一篇轮播，布局的思路稍微不同。无缝轮播只放需要的图片，轮播时所看到的两张图片的left都改变。而这个轮播是把ul的宽设为所有图片加起来的长度，轮播时移动ul的left，并在第一张图片前放置最后一张图片，最后一张图片后放置第一张图片。</p>
-<p>布局大体也一样，就是<strong>重点便是ul设置为500%。</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clear</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.banner</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>:hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.banner</span> <span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="attribute">list-style-type</span>:none;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500%</span>;</span><br><span class="line">    <span class="attribute">height</span>:  <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.banner</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pageNav</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-50%);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pageNav</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:inline-block;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">2px</span> solid <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">cursor</span>:pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pageNav</span> <span class="selector-tag">a</span><span class="selector-class">.cur</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.leftBtn</span>, <span class="selector-class">.rightBtn</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>:<span class="built_in">translateY</span>(-50%);</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="built_in">rgba</span>(0, 0, 0, 0.5);</span><br><span class="line">    <span class="attribute">cursor</span>:pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.leftBtn</span>&#123;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.rightBtn</span>&#123;</span><br><span class="line">    <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.leftBtn</span><span class="selector-pseudo">:hover</span>,<span class="selector-class">.rightBtn</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="built_in">rgba</span>(0, 0, 0, 0.8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接下来是js部分，思路也很相似，移动的元素不一样。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先获取所需要的dom元素</span></span><br><span class="line"><span class="keyword">var</span> banner=<span class="built_in">document</span>.getElementsByClassName(<span class="string">"banner"</span>)[<span class="number">0</span>], ul=banner.getElementsByTagName(<span class="string">"ul"</span>);[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">var</span> li=ul.getElementsByTagName(<span class="string">"li"</span>);</span><br><span class="line"><span class="keyword">var</span> pageNav=banner.getElementsByClassName(<span class="string">"pageNav"</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> leftBtn=banner.getElementsByClassName(<span class="string">"leftBtn"</span>)[<span class="number">0</span>],rightBtn=banner.getElementsByClassName(<span class="string">"rightBtn"</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">var</span> n=<span class="number">0</span>,timerElem,animate=<span class="literal">false</span>;</span><br><span class="line"><span class="comment">//添加分页按钮</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;li.length<span class="number">-2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">var</span> pageA=<span class="built_in">document</span>.createElement(<span class="string">"a"</span>);</span><br><span class="line">            <span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</span><br><span class="line">                pageA.className=<span class="string">"cur"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            pageNav.appendChild(pageA);</span><br><span class="line">        &#125;</span><br><span class="line">        pageNav.addEventListener(<span class="string">'click'</span>,pageNavClick,<span class="literal">false</span>);</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">pageNavClick</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            e=e||<span class="built_in">window</span>.event;<span class="comment">//兼容性考虑</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;li.length<span class="number">-2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(pageNav.children[j]==e.target)&#123;</span><br><span class="line">                    <span class="keyword">var</span> offset=(j-n)*(<span class="number">-100</span>);</span><br><span class="line">                    btnShow(j);</span><br><span class="line">                    n=j;</span><br><span class="line">                    showImg(offset);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> <span class="comment">//分页按钮函数</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">btnShow</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;li.length<span class="number">-2</span>;a++)&#123;</span><br><span class="line">                pageNav.children[a].className=<span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            pageNav.children[index].className=<span class="string">"cur"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">showImg</span>(<span class="params">offset</span>)</span>&#123;</span><br><span class="line">            clearInterval(timerElem);<span class="comment">//记得清除计时器，要不然多个计时器叠加，效果会出现问题。</span></span><br><span class="line">            <span class="keyword">var</span> speed=offset/<span class="number">20</span>;</span><br><span class="line">            <span class="keyword">var</span> newLeft=<span class="built_in">parseInt</span>(ul.style.left)+offset;</span><br><span class="line">            timerElem=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">parseInt</span>(ul.style.left)==newLeft)&#123;</span><br><span class="line">                    clearInterval(timerElem);</span><br><span class="line">                    <span class="comment">// 当第三张开始滑动时，屏幕接着它滑动的是放置在它后面的假的第一张，所以滑动结束之后要把位置从转回真的第一张</span></span><br><span class="line">                    <span class="keyword">if</span>(n==<span class="number">0</span>)&#123;</span><br><span class="line">                            ul.style.left=<span class="string">"-100%"</span>;</span><br><span class="line">                        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(n==li.length<span class="number">-3</span>)&#123;</span><br><span class="line">                            ul.style.left=(<span class="number">-100</span>)*(li.length<span class="number">-2</span>)+<span class="string">"%"</span>;</span><br><span class="line">                        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                            ul.style.left=newLeft+<span class="string">"%"</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    animate=<span class="literal">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                    animate=<span class="literal">true</span>;</span><br><span class="line">                     ul.style.left=<span class="built_in">parseInt</span>(ul.style.left)+speed+<span class="string">"%"</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        rightBtn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(animate)&#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            n++;</span><br><span class="line">            <span class="keyword">if</span>(n&gt;=li.length<span class="number">-2</span>)&#123;</span><br><span class="line">                n=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            btnShow(n);</span><br><span class="line">            showImg(<span class="number">-100</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        leftBtn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(animate)&#123;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            n--;</span><br><span class="line">            <span class="keyword">if</span>(n&lt;<span class="number">0</span>)&#123;</span><br><span class="line">                n=li.length<span class="number">-3</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            btnShow(n);</span><br><span class="line">            showImg(<span class="number">-100</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> timer=setInterval(autoLunbo,<span class="number">3000</span>);</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">autoLunbo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            rightBtn.onclick();</span><br><span class="line">        &#125;</span><br><span class="line">        banner.onmouseover=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            clearInterval(timer);</span><br><span class="line">        &#125;</span><br><span class="line">        banner.onmouseout=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            timer=setInterval(autoLunbo,<span class="number">3000</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="MVP模式"><a href="#MVP模式" class="headerlink" title="MVP模式"></a>MVP模式</h2><p>模型-视图-表示器，也就是MVP模式。是mvc模式的一种衍生模式，专注于改进表示逻辑。<img src="https://img-blog.csdnimg.cn/2019020108524532.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzczODczMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="M"><a href="#M" class="headerlink" title="M"></a>M</h4><p>Module，模型层，用户数据管理，通常是一些 javaBean, db,sharePreference,network,图片处理等耗时操作均应该放在该层。</p>
+<h4 id="V"><a href="#V" class="headerlink" title="V"></a>V</h4><p>View，视图层,一般指的是四大组件，四大组件对作为View，来完成应用程序界面的展示</p>
+<h4 id="P"><a href="#P" class="headerlink" title="P"></a>P</h4><p>Presenter 控制层，也叫中间层。相当于一个中间桥梁的作用，用于解决View 层与 Module 层的耦合，一般一个 Presenter 可以对应多个 View，一个Presenter 也可以对应多个Module</p>
+<p><strong>MVP原理理解：</strong> 首先视图层V提交一个事件交给控制器P，控制器要么调用ajax去M中获取一些数据，要么根据业务逻辑直接去操作V的DOM。P层是MVP一个重要的位置，它是视图V和模型M的一个中转站。看一些例子可知，使用MVP模式的时候，控制器中大部分代码，其实都在操作dom。</p>
+<ul>
+<li>关键点：<br>View不再负责同步的逻辑，而是由Presenter负责。Presenter中既有业务逻辑也有同步逻辑。<br>View需要提供操作界面的接口给Presenter进行调用。（关键）</li>
+</ul>
+<h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><p>模型-视图-视图模型是一种基于MVP的架构模式，它试图更清晰的将用户界面开发从应用程序的业务逻辑与行为中分离。</p>
+<h4 id="M-1"><a href="#M-1" class="headerlink" title="M"></a>M</h4><p>Module，模型层，用户数据管理，通常是一些 javaBean, db,sharePreference,network,图片处理等耗时操作均应该放在该层。</p>
+<h4 id="V-1"><a href="#V-1" class="headerlink" title="V"></a>V</h4><p>View，视图层,一般指的是四大组件，四大组件对作为View，来完成应用程序界面的展示</p>
+<h4 id="VM"><a href="#VM" class="headerlink" title="VM"></a>VM</h4><p>ViewModule 控制层 ViewModule<br>这里需要解释一下什么是ViewModel。ViewModel的含义就是 “Model of View”，视图的模型。它的含义包含了领域模型（Domain Model）和视图的状态（State）。 在图形界面应用程序当中，界面所提供的信息可能不仅仅包含应用程序的领域模型。还可能包含一些领域模型不包含的视图状态，例如电子表格程序上需要显示当前排序的状态是顺序的还是逆序的，而这是Domain Model所不包含的，但也是需要显示的信息。<br>可以简单把ViewModel理解为页面上所显示内容的数据抽象，和Domain Model不一样，ViewModel更适合用来描述View。<br><strong>MVVM理解：</strong> MVVM模式中，我们更多做的V层和M层的操作，V能够监听到你V层上的改变，通过VM层去调用你写的一些逻辑代码，而这些逻辑代码的调用，又帮助你改变了M层的数据。当M层数据改变是，VM层又会自动把改变映射到V层。<br>从MVVM模式中，我们的重点是M层的代码编写~</p>
+<h5 id="MVVM的优缺点"><a href="#MVVM的优缺点" class="headerlink" title="MVVM的优缺点"></a>MVVM的优缺点</h5><ul>
+<li>优点：<br>提高可维护性。解决了MVP大量的手动View和Model同步的问题，提供双向绑定机制。提高了代码的可维护性。<br>简化测试。因为同步逻辑是交由Binder做的，View跟着Model同时变更，所以只需要保证Model的正确性，View就正确。大大减少了对View同步更新的测试。</li>
+<li>缺点：<br>过于简单的图形界面不适用，或说牛刀杀鸡。<br>对于大型的图形应用程序，视图状态较多，ViewModel的构建和维护的成本都会比较高。<br>数据绑定的声明是指令式地写在View的模版当中的，这些内容是没办法去打断点debug的。</li>
+</ul>
 
       
     </div>
@@ -528,12 +537,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/01/27/Lunbo1 (2)/">原生JS实现简单动态轮播（二）</a></p>
+  <p><span>本文标题:</span><a href="/2019/02/02/MVP/">MVP模式和MVVM模式学习笔记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Bai 的个人博客">Bai</a></p>
-  <p><span>发布时间:</span>2019年01月27日 - 23:01</p>
-  <p><span>最后更新:</span>2019年01月27日 - 23:01</p>
-  <p><span>原始链接:</span><a href="/2019/01/27/Lunbo1 (2)/" title="原生JS实现简单动态轮播（二）">http://yoursite.com/2019/01/27/Lunbo1 (2)/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/01/27/Lunbo1 (2)/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年02月02日 - 23:02</p>
+  <p><span>最后更新:</span>2019年02月02日 - 23:02</p>
+  <p><span>原始链接:</span><a href="/2019/02/02/MVP/" title="MVP模式和MVVM模式学习笔记">http://yoursite.com/2019/02/02/MVP/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/02/02/MVP/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -567,7 +576,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javaScript/" rel="tag"><i class="fa fa-tag"></i> javaScript</a>
+            <a href="/tags/MVP/" rel="tag"><i class="fa fa-tag"></i> MVP</a>
+          
+            <a href="/tags/MVVM/" rel="tag"><i class="fa fa-tag"></i> MVVM</a>
           
         </div>
       
@@ -580,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/Lunbo/" rel="next" title="原生JS实现动态轮播（一）无缝轮播">
-                <i class="fa fa-chevron-left"></i> 原生JS实现动态轮播（一）无缝轮播
+              <a href="/2019/01/29/package control/" rel="next" title="package control出现错误时怎样让sublime text3支持Vue语法高亮显示">
+                <i class="fa fa-chevron-left"></i> package control出现错误时怎样让sublime text3支持Vue语法高亮显示
               </a>
             
           </div>
@@ -590,8 +601,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/29/webpack41/" rel="prev" title="webpack4学习笔记一">
-                webpack4学习笔记一 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/02/VUElifcircle/" rel="prev" title="Vue生命周期笔记">
+                Vue生命周期笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -641,8 +652,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -807,6 +827,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVP模式"><span class="nav-number">1.</span> <span class="nav-text">MVP模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#M"><span class="nav-number">1.0.1.</span> <span class="nav-text">M</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#V"><span class="nav-number">1.0.2.</span> <span class="nav-text">V</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#P"><span class="nav-number">1.0.3.</span> <span class="nav-text">P</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM"><span class="nav-number">2.</span> <span class="nav-text">MVVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#M-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">M</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#V-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">V</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VM"><span class="nav-number">2.0.3.</span> <span class="nav-text">VM</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MVVM的优缺点"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">MVVM的优缺点</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
