@@ -1970,7 +1970,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f749c4;
+  background: #30f4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3282,12 +3282,6 @@ ul.breadcrumb li+li:last-child {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.7);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.7);
-}
-body {
-  background-image: url("../../../images/6.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 #footer a {
   color: #eee;

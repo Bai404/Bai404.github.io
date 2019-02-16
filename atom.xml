@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-02T15:35:56.792Z</updated>
+  <updated>2019-02-16T14:28:47.929Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何判断一个变量是数组Array类型</title>
+    <link href="http://yoursite.com/2019/02/16/isArray/"/>
+    <id>http://yoursite.com/2019/02/16/isArray/</id>
+    <published>2019-02-16T14:26:50.264Z</published>
+    <updated>2019-02-16T14:28:47.929Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-instanceof操作符"><a href="#1-instanceof操作符" class="headerlink" title="1. instanceof操作符"></a>1. instanceof操作符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure><h3 id="2-对象的constructor属性"><a href="#2-对象的constructor属性" class="headerlink" title="2. 对象的constructor属性"></a>2. 对象的constructor属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr.constructor === <span class="built_in">Array</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure><h3 id="3-Array-isArray-（ie9以上支持）"><a href="#3-Array-isArray-（ie9以上支持）" class="headerlink" title="3. Array.isArray()（ie9以上支持）"></a>3. Array.isArray()（ie9以上支持）</h3><pre><code>Array.isArray([1, 2, 3]);  // true</code></pre><h3 id="4-Object-prototype-toString"><a href="#4-Object-prototype-toString" class="headerlink" title="4. Object.prototype.toString"></a>4. Object.prototype.toString</h3><p>这个方法稍微绕了点弯，我们先看以下一下例子就明白了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'abc'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.()) <span class="comment">//[object Object]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(str))<span class="comment">//[object String]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(num))<span class="comment">//[object Number]</span></span><br></pre></td></tr></table></figure></p><p>call改变toString的this引用为待检测的对象，返回此对象的字符串表示，然后对比此字符串是否是’[object Array]’，以判断其是否是Array的实例。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr= [1,1]</span><br><span class="line">console.log(Object.prototype.toString.call(arr))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-instanceof操作符&quot;&gt;&lt;a href=&quot;#1-instanceof操作符&quot; class=&quot;headerlink&quot; title=&quot;1. instanceof操作符&quot;&gt;&lt;/a&gt;1. instanceof操作符&lt;/h3&gt;&lt;figure class=&quot;high
+      
+    
+    </summary>
+    
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
+    
+      <category term="javaScript" scheme="http://yoursite.com/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue生命周期笔记</title>
