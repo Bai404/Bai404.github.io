@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-18T15:13:18.390Z</updated>
+  <updated>2019-03-08T09:47:36.883Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>__dirname和__filename和process.cwd()三者的区别</title>
+    <link href="http://yoursite.com/2019/03/08/dirname/"/>
+    <id>http://yoursite.com/2019/03/08/dirname/</id>
+    <published>2019-03-08T09:47:36.881Z</published>
+    <updated>2019-03-08T09:47:36.883Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在学习用Node.js做一个简单的静态资源服务器，<strong>dirname和</strong>filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！<br><strong>简单说一下这几个路径的意思：</strong></p><blockquote><p><strong>dirname：    获得当前执行文件所在目录的完整目录名</strong>filename：   获得当前执行文件的带有完整绝对路径的文件名<br>process.cwd()：获得当前执行node命令时候的文件夹目录名</p></blockquote><p><strong>目录结构：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">syntax/</span><br><span class="line">    -nodejs/</span><br><span class="line">        -1.findLargest.js</span><br><span class="line">        -2.path.js</span><br><span class="line">        -3.fs.js</span><br><span class="line">    -regs</span><br><span class="line">        -regx.js</span><br><span class="line">        -test.txt</span><br></pre></td></tr></table></figure><p>在 path.js 里面我们写这些代码，看看输出是什么：</p><pre><code>const path = require(&apos;path&apos;)console.log(&apos;__dirname：&apos;, __dirname)console.log(&apos;__filename：&apos;, __filename)console.log(&apos;process.cwd()：&apos;, process.cwd())</code></pre><p>在当前目录下也就是nodejs目录运行 node path.js，我们看看输出结果：</p><pre><code>__dirname：     /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs__filename：    /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.jsprocess.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs</code></pre><p>然后在 项目根目录ES6-lottery 目录下运行 node syntax/nodejs/2.path.js，我们再来看看输出结果：</p><pre><code>__dirname：     /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs__filename：    /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.jsprocess.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery</code></pre><p>==总结：==<br><strong>dirname： 获得当前执行文件所在目录的完整目录名</strong>filename： 获得当前执行文件的带有完整绝对路径的文件名<br>process.cwd()：获得当前执行node命令时候的文件夹目录名</p><p>process.cwd()是程序的执行路径，__filename和_dirname是js文件有的属性，区别就很明显了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在学习用Node.js做一个简单的静态资源服务器，&lt;strong&gt;dirname和&lt;/strong&gt;filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！&lt;br&gt;&lt;strong&gt;简单说一下这几个路径的意思：&lt;/strong&gt;&lt;/p&gt;
+&lt;blo
+      
+    
+    </summary>
+    
+      <category term="Computer Basics" scheme="http://yoursite.com/categories/Computer-Basics/"/>
+    
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>编程题Check for Palindromes（检查是否为回文）</title>
@@ -512,32 +538,6 @@
       
       
         &lt;p&gt;今天试了试自己写个抽奖大转盘。&lt;br&gt;先是借了两张别人的图片：&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20181126103321475.png&quot; alt=&quot;指针&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img-blog.c
-      
-    
-    </summary>
-    
-      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
-    
-    
-      <category term="javaScript" scheme="http://yoursite.com/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS写斐波那契数列的几种方法</title>
-    <link href="http://yoursite.com/2019/01/06/fibonacci/"/>
-    <id>http://yoursite.com/2019/01/06/fibonacci/</id>
-    <published>2019-01-06T10:42:17.722Z</published>
-    <updated>2019-02-17T05:53:30.264Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>方法1</strong> 最直观的解题思路.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fibonacci</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num1= <span class="number">1</span>,num2= <span class="number">1</span>,sum;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">3</span>; i &lt;= n; i += <span class="number">1</span>) &#123;</span><br><span class="line">        sum = num1 + num2</span><br><span class="line">        num1 = num2</span><br><span class="line">        num2 = sum</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//稍微改进一下以上的方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fibonaccii</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num1=<span class="number">1</span>,num2=<span class="number">1</span>,num3;</span><br><span class="line">    <span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">3</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        num3=num1+num2;</span><br><span class="line">        num1=num2;</span><br><span class="line">        num2=num3;</span><br><span class="line">        arr.push(num3);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>方法2</strong> 使用递归的方法, 但是当数字过大时浏览器会出现假死现象。毕竟递归需要堆栈，数字过大内存不够。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">result</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> result(n<span class="number">-2</span>)+result(n<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//同样使用递归，只不过使用了三元表达式。</span></span><br><span class="line">    <span class="keyword">var</span> fib=<span class="function"><span class="keyword">function</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n&lt;<span class="number">2</span>?n:fib(n<span class="number">-1</span>)+fib(n<span class="number">-2</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=<span class="number">10</span>;i+=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(fib(i));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p><strong>方法3</strong> 使用“记忆”方法减少运算量。在一个数组里保存我们的储存结果，储存结果隐藏在闭包中.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> fibonaci=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> memo=[<span class="number">0</span>,<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">var</span> fib=<span class="function"><span class="keyword">function</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> result=memo[n];</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">typeof</span> result!==<span class="string">'number'</span>)&#123;</span><br><span class="line">                result=fib(n<span class="number">-1</span>)+fib(n<span class="number">-2</span>);</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> fib;</span><br><span class="line">    &#125;();</span><br><span class="line"><span class="comment">// 我们可以把这种技术推而广之</span></span><br><span class="line"><span class="comment">//编写一个函数来帮助我们构造带记忆功能的函数.</span></span><br><span class="line">    <span class="keyword">var</span> memoizer=<span class="function"><span class="keyword">function</span>(<span class="params">memo,formula</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> recur=<span class="function"><span class="keyword">function</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> result=memo[n];</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">typeof</span> result!==<span class="string">'number'</span>)&#123;</span><br><span class="line">                result=formula(recur,n);</span><br><span class="line">                memo[n]=result;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> recur;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">var</span> fib=memoizer([<span class="number">0</span>,<span class="number">1</span>],<span class="function"><span class="keyword">function</span>(<span class="params">recur,n</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> recur(n<span class="number">-1</span>)+recur(n<span class="number">-2</span>);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure><p><strong>方法4</strong> 使用ES6中的generator</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">fib</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> b=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> n=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(n&lt;=x)&#123;</span><br><span class="line">        <span class="keyword">yield</span> a;</span><br><span class="line">        [a,b]=[b,a+b];</span><br><span class="line">        n++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(fib(<span class="number">5</span>));</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;方法1&lt;/strong&gt; 最直观的解题思路.&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br
       
     
     </summary>

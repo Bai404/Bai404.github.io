@@ -105,18 +105,18 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="匀速运动鼠标经过，匀速运动开始css部分12345678910111213141516171819202122232425*&amp;#123;    margin: 0;    padding: 0;&amp;#125;.box&amp;#123;    position:relative;    width:150px;    height:150px;    background-color: green;">
-<meta name="keywords" content="javaScript">
+  <meta name="description" content="最近在学习用Node.js做一个简单的静态资源服务器，dirname和filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！简单说一下这几个路径的意思：  dirname：    获得当前执行文件所在目录的完整目录名 filename：   获得当前执行文件的带有完整绝对路径的文件名process.cwd()：获得当前执行node命令时候的文件夹目录名  目录结构： 1">
+<meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js高级之运动系列（匀速运动&#x2F;缓冲运动&#x2F;弹性运动）">
-<meta property="og:url" content="http://yoursite.com/2019/01/06/JS_moves/index.html">
+<meta property="og:title" content="__dirname和__filename和process.cwd()三者的区别">
+<meta property="og:url" content="http://yoursite.com/2019/03/08/dirname/index.html">
 <meta property="og:site_name" content="Bai&#39;s blog">
-<meta property="og:description" content="匀速运动鼠标经过，匀速运动开始css部分12345678910111213141516171819202122232425*&amp;#123;    margin: 0;    padding: 0;&amp;#125;.box&amp;#123;    position:relative;    width:150px;    height:150px;    background-color: green;">
+<meta property="og:description" content="最近在学习用Node.js做一个简单的静态资源服务器，dirname和filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！简单说一下这几个路径的意思：  dirname：    获得当前执行文件所在目录的完整目录名 filename：   获得当前执行文件的带有完整绝对路径的文件名process.cwd()：获得当前执行node命令时候的文件夹目录名  目录结构： 1">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-06T11:51:11.379Z">
+<meta property="og:updated_time" content="2019-03-08T09:47:36.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js高级之运动系列（匀速运动&#x2F;缓冲运动&#x2F;弹性运动）">
-<meta name="twitter:description" content="匀速运动鼠标经过，匀速运动开始css部分12345678910111213141516171819202122232425*&amp;#123;    margin: 0;    padding: 0;&amp;#125;.box&amp;#123;    position:relative;    width:150px;    height:150px;    background-color: green;">
+<meta name="twitter:title" content="__dirname和__filename和process.cwd()三者的区别">
+<meta name="twitter:description" content="最近在学习用Node.js做一个简单的静态资源服务器，dirname和filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！简单说一下这几个路径的意思：  dirname：    获得当前执行文件所在目录的完整目录名 filename：   获得当前执行文件的带有完整绝对路径的文件名process.cwd()：获得当前执行node命令时候的文件夹目录名  目录结构： 1">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/06/JS_moves/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/08/dirname/">
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>js高级之运动系列（匀速运动/缓冲运动/弹性运动） | Bai's blog</title>
+  <title>__dirname和__filename和process.cwd()三者的区别 | Bai's blog</title>
   
 
 
@@ -380,7 +380,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/JS_moves/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/dirname/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="一只白~">
@@ -397,7 +397,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js高级之运动系列（匀速运动/缓冲运动/弹性运动）
+          <h1 class="post-title" itemprop="name headline">__dirname和__filename和process.cwd()三者的区别
 
               
             
@@ -423,13 +423,9 @@
                 
               
 
-              <time title="Created: 2019-01-06 19:40:03 / Modified: 19:51:11" itemprop="dateCreated datePublished" datetime="2019-01-06T19:40:03+08:00">2019-01-06</time>
+              <time title="Created: 2019-03-08 17:47:36" itemprop="dateCreated datePublished" datetime="2019-03-08T17:47:36+08:00">2019-03-08</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -445,7 +441,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javaScript/" itemprop="url" rel="index"><span itemprop="name">javaScript</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Basics/" itemprop="url" rel="index"><span itemprop="name">Computer Basics</span></a></span>
 
                 
                 
@@ -460,8 +456,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/06/JS_moves/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/06/JS_moves/" itemprop="commentCount"></span>
+                <a href="/2019/03/08/dirname/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/dirname/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -489,15 +485,29 @@
       
 
       
-        <h2 id="匀速运动"><a href="#匀速运动" class="headerlink" title="匀速运动"></a>匀速运动</h2><p>鼠标经过，匀速运动开始<br>css部分<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">left</span>:-<span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">right</span>:-<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">translateY</span>(-50%);</span><br><span class="line">       <span class="attribute">-moz-transform</span>: <span class="built_in">translateY</span>(-50%);</span><br><span class="line">        <span class="attribute">-ms-transform</span>: <span class="built_in">translateY</span>(-50%);</span><br><span class="line">         <span class="attribute">-o-transform</span>: <span class="built_in">translateY</span>(-50%);</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>布局<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>匀速<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>js代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> box=<span class="built_in">document</span>.getElementsByClassName(<span class="string">"box"</span>)[<span class="number">0</span>];</span><br><span class="line">    box.onmouseover=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        startMove(box,<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    box.onmouseout=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        startMove(box,<span class="number">-150</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> timer=<span class="literal">null</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startMove</span>(<span class="params">obj,target</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> speed=<span class="number">0</span>;</span><br><span class="line">    clearInterval(timer);</span><br><span class="line">    timer=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(obj.offsetLeft&lt;target)&#123;</span><br><span class="line">            speed=<span class="number">10</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            speed=<span class="number">-10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(obj.offsetLeft==target)&#123;</span><br><span class="line">            clearInterval(timer);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            obj.style.left=obj.offsetLeft+speed+<span class="string">"px"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;,<span class="number">30</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="简单缓冲运动并回到原点"><a href="#简单缓冲运动并回到原点" class="headerlink" title="简单缓冲运动并回到原点"></a>简单缓冲运动并回到原点</h2><p>布局部分，嘿嘿以简单为主。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"开始"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"回到原点"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>css部分<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.line</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">700px</span>;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>js代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> box=<span class="built_in">document</span>.getElementsByClassName(<span class="string">"box"</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> back=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>)[<span class="number">1</span>];</span><br><span class="line">    <span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> timer=<span class="literal">null</span>;</span><br><span class="line">        btn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        startMove(box,<span class="number">700</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//缓冲运动部分</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">startMove</span>(<span class="params">elem,target</span>)</span>&#123;</span><br><span class="line">            clearTimeout(timer);</span><br><span class="line">            timer=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> speed=(target-elem.offsetLeft)/<span class="number">10</span>;</span><br><span class="line">                speed=speed&gt;<span class="number">0</span>?<span class="built_in">Math</span>.ceil((target-elem.offsetLeft)/<span class="number">10</span>):<span class="built_in">Math</span>.floor((target-elem.offsetLeft)/<span class="number">10</span>);</span><br><span class="line">                <span class="keyword">if</span>(target==elem.offsetLeft)&#123;</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    elem.style.left=elem.offsetLeft+speed+<span class="string">"px"</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,<span class="number">100</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        back.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            startMove(box,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//回到原点部分</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">backMove</span>(<span class="params">elem,target</span>)</span>&#123;</span><br><span class="line">            clearTimeout(timer);</span><br><span class="line">            timer=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> speed=<span class="built_in">Math</span>.floor((target-elem.offsetLeft)/<span class="number">10</span>);</span><br><span class="line">                <span class="keyword">if</span>(target==elem.offsetLeft)&#123;</span><br><span class="line">                    clearTimeout(timer);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    elem.style.left=elem.offsetLeft+speed+<span class="string">"px"</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,<span class="number">100</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="弹性运动"><a href="#弹性运动" class="headerlink" title="弹性运动"></a>弹性运动</h2><p>一个运动的盒子，一个开始的按钮，一条终点线.，我设置这条线的原因是方便看出效果，也可以不设啦。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">"开始"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>javaScript代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> btn=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>)[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">var</span> box=<span class="built_in">document</span>.getElementsByClassName(<span class="string">"box"</span>)[<span class="number">0</span>];</span><br><span class="line">            btn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                startMove(box,<span class="number">700</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> timer=<span class="literal">null</span>;</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">startMove</span>(<span class="params">elem,target</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">var</span> speed=<span class="number">0</span>;</span><br><span class="line">                timer=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                    speed+=(target-elem.offsetLeft)/<span class="number">8</span>;</span><br><span class="line">                    speed*=<span class="number">0.7</span>;</span><br><span class="line">                    <span class="comment">//我觉得0.7的效果好一点</span></span><br><span class="line">                    <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(speed)&lt;<span class="number">1</span>&amp;&amp;<span class="built_in">Math</span>.abs(elem.offsetLeft-target)&lt;<span class="number">1</span>)&#123;</span><br><span class="line">                        clearTimeout(timer);</span><br><span class="line">                        elem.style.left=target+<span class="string">"px"</span>;<span class="comment">//回到终点位置</span></span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        elem.style.left=elem.offsetLeft+speed+<span class="string">"px"</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,<span class="number">100</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
-<p>为了使刚好在终点线的位置做弹性运动，传入参数target就是终点线距离盒子的位置。<br>css部分<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.line</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">700px</span>;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>最近在学习用Node.js做一个简单的静态资源服务器，<strong>dirname和</strong>filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！<br><strong>简单说一下这几个路径的意思：</strong></p>
+<blockquote>
+<p><strong>dirname：    获得当前执行文件所在目录的完整目录名
+</strong>filename：   获得当前执行文件的带有完整绝对路径的文件名<br>process.cwd()：获得当前执行node命令时候的文件夹目录名</p>
+</blockquote>
+<p><strong>目录结构：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">syntax/</span><br><span class="line">    -nodejs/</span><br><span class="line">        -1.findLargest.js</span><br><span class="line">        -2.path.js</span><br><span class="line">        -3.fs.js</span><br><span class="line">    -regs</span><br><span class="line">        -regx.js</span><br><span class="line">        -test.txt</span><br></pre></td></tr></table></figure>
+<p>在 path.js 里面我们写这些代码，看看输出是什么：</p>
+<pre><code>const path = require(&apos;path&apos;)
+console.log(&apos;__dirname：&apos;, __dirname)
+console.log(&apos;__filename：&apos;, __filename)
+console.log(&apos;process.cwd()：&apos;, process.cwd())
+</code></pre><p>在当前目录下也就是nodejs目录运行 node path.js，我们看看输出结果：</p>
+<pre><code>__dirname：     /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs
+__filename：    /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.js
+process.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs
+</code></pre><p>然后在 项目根目录ES6-lottery 目录下运行 node syntax/nodejs/2.path.js，我们再来看看输出结果：</p>
+<pre><code>__dirname：     /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs
+__filename：    /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.js
+process.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery
+</code></pre><p>==总结：==<br><strong>dirname： 获得当前执行文件所在目录的完整目录名
+</strong>filename： 获得当前执行文件的带有完整绝对路径的文件名<br>process.cwd()：获得当前执行node命令时候的文件夹目录名</p>
+<p>process.cwd()是程序的执行路径，__filename和_dirname是js文件有的属性，区别就很明显了</p>
 
       
     </div>
@@ -528,12 +538,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/01/06/JS_moves/">js高级之运动系列（匀速运动/缓冲运动/弹性运动）</a></p>
+  <p><span>本文标题:</span><a href="/2019/03/08/dirname/">__dirname和__filename和process.cwd()三者的区别</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 一只白~ 的个人博客">一只白~</a></p>
-  <p><span>发布时间:</span>2019年01月06日 - 19:01</p>
-  <p><span>最后更新:</span>2019年01月06日 - 19:01</p>
-  <p><span>原始链接:</span><a href="/2019/01/06/JS_moves/" title="js高级之运动系列（匀速运动/缓冲运动/弹性运动）">http://yoursite.com/2019/01/06/JS_moves/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/01/06/JS_moves/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年03月08日 - 17:03</p>
+  <p><span>最后更新:</span>2019年03月08日 - 17:03</p>
+  <p><span>原始链接:</span><a href="/2019/03/08/dirname/" title="__dirname和__filename和process.cwd()三者的区别">http://yoursite.com/2019/03/08/dirname/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/03/08/dirname/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -567,7 +577,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javaScript/" rel="tag"><i class="fa fa-tag"></i> javaScript</a>
+            <a href="/tags/Node-js/" rel="tag"><i class="fa fa-tag"></i> Node.js</a>
           
         </div>
       
@@ -580,8 +590,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/06/Mirroring/" rel="next" title="学习镜像概念">
-                <i class="fa fa-chevron-left"></i> 学习镜像概念
+              <a href="/2019/02/18/编程题Check for Palindromes（检查是否为回文）/" rel="next" title="编程题Check for Palindromes（检查是否为回文）">
+                <i class="fa fa-chevron-left"></i> 编程题Check for Palindromes（检查是否为回文）
               </a>
             
           </div>
@@ -589,10 +599,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/07/CDN/" rel="prev" title="什么是SDK什么是CDN">
-                什么是SDK什么是CDN <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -641,17 +647,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -816,23 +813,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#匀速运动"><span class="nav-number">1.</span> <span class="nav-text">匀速运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单缓冲运动并回到原点"><span class="nav-number">2.</span> <span class="nav-text">简单缓冲运动并回到原点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弹性运动"><span class="nav-number">3.</span> <span class="nav-text">弹性运动</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

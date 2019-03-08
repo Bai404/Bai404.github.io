@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[__dirname和__filename和process.cwd()三者的区别]]></title>
+    <url>%2F2019%2F03%2F08%2Fdirname%2F</url>
+    <content type="text"><![CDATA[最近在学习用Node.js做一个简单的静态资源服务器，dirname和filename和process.cwd()简直让我混乱，- -！需要做一篇笔记！简单说一下这几个路径的意思： dirname： 获得当前执行文件所在目录的完整目录名 filename： 获得当前执行文件的带有完整绝对路径的文件名process.cwd()：获得当前执行node命令时候的文件夹目录名 目录结构： 12345678syntax/ -nodejs/ -1.findLargest.js -2.path.js -3.fs.js -regs -regx.js -test.txt 在 path.js 里面我们写这些代码，看看输出是什么： const path = require(&apos;path&apos;) console.log(&apos;__dirname：&apos;, __dirname) console.log(&apos;__filename：&apos;, __filename) console.log(&apos;process.cwd()：&apos;, process.cwd()) 在当前目录下也就是nodejs目录运行 node path.js，我们看看输出结果： __dirname： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs __filename： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.js process.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs 然后在 项目根目录ES6-lottery 目录下运行 node syntax/nodejs/2.path.js，我们再来看看输出结果： __dirname： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs __filename： /Users/Desktop/nodejs/demo/ES6-lottery/syntax/nodejs/2.path.js process.cwd()： /Users/Desktop/nodejs/demo/ES6-lottery ==总结：==dirname： 获得当前执行文件所在目录的完整目录名 filename： 获得当前执行文件的带有完整绝对路径的文件名process.cwd()：获得当前执行node命令时候的文件夹目录名 process.cwd()是程序的执行路径，__filename和_dirname是js文件有的属性，区别就很明显了]]></content>
+      <categories>
+        <category>Computer Basics</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[编程题Check for Palindromes（检查是否为回文）]]></title>
     <url>%2F2019%2F02%2F18%2F%E7%BC%96%E7%A8%8B%E9%A2%98Check%20for%20Palindromes%EF%BC%88%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E4%B8%BA%E5%9B%9E%E6%96%87%EF%BC%89%2F</url>
     <content type="text"><![CDATA[FreeCodeCamp中文社区刷题答案及笔记 题目如果给定的字符串是回文，返回true，反之，返回false。 如果一个字符串忽略标点符号、大小写和空格，正着读和反着读一模一样，那么这个字符串就是palindrome(回文)。 注意你需要去掉字符串多余的标点符号和空格，然后把字符串转化成小写来验证此字符串是否为回文。 函数参数的值可以为”racecar”，”RaceCar”和”race CAR”。 测试要求palindrome(“eye”) 应该返回一个布尔值palindrome(“eye”) 应该返回 true.palindrome(“race car”) 应该返回 true.palindrome(“not a palindrome”) 应该返回 false.palindrome(“A man, a plan, a canal. Panama”) 应该返回 true.palindrome(“never odd or even”) 应该返回 true.palindrome(“nope”) 应该返回 false.palindrome(“almostomla”) 应该返回 false.palindrome(“My age is 0, 0 si ega ym.”) 应该返回 true.palindrome(“1 eye for of 1 eye.”) 应该返回 false.palindrome(“0_0 (: /-\ :) 0-0”) 应该返回 true. 解决方法1234567891011121314151617181920function palindrome(str) &#123; var lowStr=str.replace(/[\W_]/g,"").toLowerCase(); var arr=lowStr.split(""); var newStr=arr.reverse().join(""); if(newStr==lowStr)&#123; return true; &#125;else&#123; return false; &#125;&#125;//方法2function palindrome(str) &#123; var newStr=str.replace(/[\W_]/g,"").toLowerCase(); for(var i =0;i&lt;newStr.length/2;i++)&#123; if(newStr.charAt(i) != newStr.charAt(newStr.length-1-i))&#123; return false; &#125; &#125; return true;&#125; str.replace(/[\W_]/g,””).toLowerCase();去除给定字符串中多余的字符，并转为小写。转化为数组以后使用数组的reverse方法进行反转。]]></content>
